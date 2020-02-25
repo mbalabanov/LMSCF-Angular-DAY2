@@ -22,7 +22,6 @@ export class CarlistComponent implements OnInit {
 
 	showModal(a){
 		console.log('Yay!' + a);
-		$('#' + a).trigger('focus')
 	}
 
 	ngOnInit(): void {
