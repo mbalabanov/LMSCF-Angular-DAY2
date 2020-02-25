@@ -1,0 +1,47 @@
+<main>
+	<div class="row p-3">
+		<div class="col-12 text-center">
+			<h2>Cars for Rent</h2>
+			<div class="row">
+
+				<div class="col-4 my-4" *ngFor="let car of cars">
+					<div class="card">
+						<img src="{{car.photo}}" class="card-img-top" alt="{{car.modelName}}">
+						<div class="card-body">
+							<h5 class="card-title">{{car.modelName}}</h5>
+							<p class="card-text">Cost: €{{car.cost}}</p>
+							<p>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#" (click)="showModal(car.carid)">
+									Details
+								</button>
+							</p>
+						</div>
+					</div>
+					<div class="modal fade" id="{{car.carid}}" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modallabel{{car.carid}}">{{car.modleName}}</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+							</div>
+							<div class="modal-body">
+								<img class="card-img-top" src="{{car.photo}}" alt="{{car.modelName}}">
+								<h4 class="py-4" >{{car.modelName}}</h4>
+								<p><strong>{{car.cost}}</strong></p>
+								<p>{{car.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+
+	</div>
+</main>

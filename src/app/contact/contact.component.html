@@ -1,0 +1,17 @@
+<form formGroup="contactinfo" (ngSubmit)="onSubmit()">
+	<div class="form-group">
+		<label>
+			Name:
+			<input type="text" formControlName="name">
+		</label>
+		<label>
+			Email:
+			<input type="text" formControlName="email">
+		</label>
+		<label>
+			Message:
+			<input type="text" formControlName="message">
+		</label>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
