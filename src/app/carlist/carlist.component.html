@@ -11,13 +11,13 @@
 							<h5 class="card-title">{{car.modelName}}</h5>
 							<p class="card-text">Cost: €{{car.cost}}</p>
 							<p>
-								<button type="button" class="btn btn-primary" data-toggle="modal" >
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
 									Details
 								</button>
 							</p>
 						</div>
 					</div>
-					<div class="modal fade" id="{{car.carid}}" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal fade" id="modal{{car.carid}}" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
